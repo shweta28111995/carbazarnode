@@ -16,7 +16,7 @@ cb( null, filename+ Date.now()+"."+extension);
    
   var upload = multer({ storage: storage }).single('images')
 
-router.post('/add', function (req, res) {
+router.post('/', function (req, res) {
   console.log(req.file);
   upload(req, res, function (err) {
     if (err)
